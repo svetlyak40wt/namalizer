@@ -26,10 +26,18 @@ Here is example:
     if __name__ == '__main__':
         unittest.main()
 
+Namalizer creates aliases for method with wrong names. In this case,
+it will create aliazes in `unittest.TestCase` for methods like `setUp`,
+`assertEqual`, etc..
+
+Then, it will see that you created method `set_up` to override base class's
+functionality and will create alias `setUp` for this method, this way
+when `unittest` will call `setUp`, you version will be called.
+
 Migration
 ---------
 
-If you use some library with wierd naming method, this regex will help you to
+If you use some library with ugly naming method, this regex will help you to
 find all places where wrong names are used:
 
     git grep -e '\(\.\|def \)[a-z]\+[A-Z]'
