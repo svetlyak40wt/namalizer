@@ -6,5 +6,15 @@ setup(
     description='Normalizes method names according to PEP8.',
     author='Alexander Artemenko',
     author_email='svetlyak.40wt@gmail.com',
+    license = 'New BSD License',
+    keywords='python library pep8 pep normalizer naming',
+    url = 'http://github.com/svetlyak40wt/namalizer/',
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Programming Language :: Python',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
     py_modules=['namalizer'],
 )
