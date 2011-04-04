@@ -1,5 +1,5 @@
 import re
-import logbook
+#import logbook
 from inspect import isroutine, getmro
 from itertools import chain
 
@@ -46,21 +46,21 @@ def pep8(*args, **kwargs):
 
                                 if norm_value is None or not _defined_in(obj, norm_name, norm_value):
                                     # no method with normalized name
-                                    logbook.Logger('pep8').info(
-                                        'writing from %s(%s) to %s(%s) for %r' % (name, hash(value), norm_name, hash(norm_value), obj)
-                                    )
+                                    #logbook.Logger('pep8').info(
+                                    #    'writing from %s(%s) to %s(%s) for %r' % (name, hash(value), norm_name, hash(norm_value), obj)
+                                    #)
                                     setattr(obj, norm_name, value)
                                 else:
                                     # set new value back because, probably it is
                                     # overridden method
                                     if norm_value != value:
-                                        logbook.Logger('pep8').info(
-                                            'writing back from %s(%s) to %s(%s) for %r' % (
-                                                norm_name, hash(norm_value),
-                                                name, hash(value),
-                                                obj
-                                            )
-                                        )
+                                        #logbook.Logger('pep8').info(
+                                        #    'writing back from %s(%s) to %s(%s) for %r' % (
+                                        #        norm_name, hash(norm_value),
+                                        #        name, hash(value),
+                                        #        obj
+                                        #    )
+                                        #)
                                         setattr(obj, name, norm_value)
                             except TypeError:
                                 pass
