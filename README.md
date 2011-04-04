@@ -5,7 +5,6 @@ It allows you to keep PEP8 naming style, using libraries like `Twisted` or `unit
 
 Here is example:
 
-    :::python
     #!/usr/bin/python
     import unittest
     from namalizer import pep8
@@ -27,3 +26,17 @@ Here is example:
     if __name__ == '__main__':
         unittest.main()
 
+Migration
+---------
+
+If you use some library with wierd naming method, this regex will help you to
+find all places where wrong names are used:
+
+    git grep -e '\(\.\|def \)[a-z]\+[A-Z]'
+
+Credits
+-------
+
+* Alexander Artemenko <<svetlyak.40wt@gmail.com>> — original author.
+
+Fork the project, contribute and send me patches.
