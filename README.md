@@ -48,3 +48,7 @@ Credits
 * Alexander Artemenko <<svetlyak.40wt@gmail.com>> — original author.
 
 Fork the project, contribute and send me patches.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/svetlyak40wt/namalizer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
